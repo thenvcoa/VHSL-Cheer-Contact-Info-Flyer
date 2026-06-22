@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VHSL Cheer Contact Information</title>
+
+  <style>
+    /* =========================================================
+       VHSL CHEER CONTACT INFORMATION
+       Editable one-page HTML flyer
+       ---------------------------------------------------------
+       Logo file expected in same folder:
+       vhsl-logo.png
+       ========================================================= */
+
+    :root {
+      --vhsl-navy: #002d72;
+      --vhsl-navy-dark: #001b45;
+      --vhsl-red: #d71920;
+      --vhsl-red-dark: #b70f17;
+      --vhsl-gold: #f2c94c;
+      --white: #ffffff;
+      --off-white: #f8f9fb;
+      --soft-gray: #e7ebf2;
+      --text: #102a43;
+      --muted: #53657d;
+      --shadow: 0 14px 35px rgba(0, 0, 0, 0.14);
+      --soft-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --page-width: 1060px;
+    }
+
+    * {box-sizing: border-box}
+    html {scroll-behavior: smooth;}
+    body {margin: 0; background: #eef2f7; color: var(--text);
+      font-family: Arial, Helvetica, sans-serif; line-height: 1.4; }
+    a {color: var(--vhsl-navy); font-weight: 700; text-decoration: underline;
+      text-underline-offset: 3px;}
+    a:hover, a:focus {color: var(--vhsl-red);}
+    .flyer {width: min(100%, var(--page-width)); margin: 0 auto;
+      background: var(--white); box-shadow: var(--shadow); overflow: hidden;}
+    .content-wrap {width: min(92%, 960px); margin: 0 auto;}
+
+    /* =========================================================
+       HEADER / HERO
+       ========================================================= */
+
+	.hero-banner {width: 100%; line-height: 0;}
+	.hero-banner-image {width: 100%; height: auto; display: block; margin-bottom: 0;}
+	.hero-title-section{text-align:center; padding:30px 20px 40px; background:#fff;}
+	.hero-title-section h1{color:#002d72; font-size:clamp(2rem,5vw,4rem);
+      text-transform:uppercase; font-weight:900; margin:0;}
+	.hero-content{margin-top:-100px; padding-top:0;}
+	.hero-title {margin: 0 auto; color: var(--vhsl-navy); font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: .98; font-weight: 900; letter-spacing: .08em; text-transform: uppercase;
+      text-shadow: 3px 3px 0 var(--vhsl-red); text-align: center;}
+	.gold-line {width: 170px; height: 6px; margin: 26px auto 22px;
+      background: var(--vhsl-gold); border-radius: 999px;}
+	.hero-subtitle {max-width: 880px; margin: 0 auto; color: var(--vhsl-navy);
+      font-size: 1.2rem;  font-weight: 700;}
+
+       /* =========================================================
+       ACTION CARD
+       ========================================================= */
+
+    .action-section {padding: 0 0 22px;}
+	.action-card {display: flex; align-items: center; justify-content: center;
+	  gap: 24px; text-align: left;
+	  background:
+		radial-gradient(circle at 8% 10%, rgba(255,255,255,0.22), transparent 28%),
+		linear-gradient(135deg, var(--vhsl-red) 0%, var(--vhsl-red-dark) 100%);
+	  color: var(--white);
+	  border-radius: var(--radius-lg);
+	  box-shadow: var(--soft-shadow);
+	  padding: 34px;}
+    .action-left {display: grid; grid-template-columns: 112px 1fr; 
+	  gap: 24px; align-items: center;}
+    .mail-badge {width: 112px; height: 112px; display: grid; place-items: center;
+      border-radius: 50%; background: var(--white); color: var(--vhsl-red);
+      font-size: 56px; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.7);}
+    .action-title {margin: 0 0 14px; font-size: clamp(2rem, 4.3vw, 3.3rem);
+      line-height: 0.96; font-weight: 900; text-transform: uppercase; letter-spacing: 0.03em;}
+    .action-kicker {margin: 0 0 16px; font-size: 1.25rem;
+      font-weight: 800; text-align: center; color: var(--vhsl-navy);}
+    .action-detail {margin: 12px 0; font-size: 1.22rem; text-align: center;}
+    .label-gold {display: block; color: var(--vhsl-gold); font-weight: 900;
+      text-transform: uppercase; letter-spacing: 0.04em; }
+    .label-navy {display: block; color: var(--vhsl-navy); font-weight: 900;
+      text-transform: uppercase; letter-spacing: 0.04em; }
+    .button-row {grid-column: 1 / -1; display: flex; flex-wrap: wrap;
+      gap: 14px; margin-top: 10px;}
+    .button {display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-width: 225px; min-height: 58px; padding: 14px 20px; border-radius: 10px;
+      background: var(--vhsl-navy); color: var(--white); border: 2px solid var(--white);
+      box-shadow: 0 4px 0 rgba(0,0,0,0.18); text-decoration: none; font-size: 1rem;
+      font-weight: 900; text-transform: uppercase; }
+    .button:hover, .button:focus {background: var(--vhsl-navy-dark);
+      color: var(--white); transform: translateY(-1px);}
+    .action-contacts {display: grid; gap: 18px; padding-left: 32px;
+      border-left: 2px solid rgba(255,255,255,0.65);}
+    .mini-contact {margin: 0; font-size: 1.04rem; line-height: 1.25;}
+    .mini-contact strong {display: block; font-size: 1.12rem; text-transform: uppercase;}
+    .mini-contact a {color: var(--white); text-decoration-color: var(--vhsl-gold);}
+
+    /* =========================================================
+       SHARED SECTION TITLES
+       ========================================================= */
+
+    .section-title-row {display: flex; align-items: center;
+      gap: 22px; margin: 18px 0 18px; color: var(--vhsl-navy);}
+    .section-title-row::before, .section-title-row::after {content: "";
+      flex: 1; height: 2px; background: var(--vhsl-navy); opacity: 0.75;}
+    .section-title {margin: 0; font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900;
+      line-height: 1; text-align: center;  text-transform: uppercase; letter-spacing: 0.05em;
+      white-space: nowrap;}
+
+    /* =========================================================
+       KEY CONTACTS
+       ========================================================= */
+
+    .key-contacts-section {padding: 0 0 20px;}
+    .key-contact-grid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;}
+    .key-card {display: grid; grid-template-columns: 72px 1fr auto; gap: 18px;
+      align-items: center; min-height: 132px; background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid #dce3ed; box-shadow: var(--soft-shadow); padding: 20px;}
+    .key-card.red-accent {border-left: 10px solid var(--vhsl-red);}
+    .key-card.navy-accent {border-left: 10px solid var(--vhsl-navy);}
+    .key-card.gold-accent {border-left: 10px solid var(--vhsl-gold);}	
+    .avatar {display: grid; place-items: center; width: 68px; height: 68px; border-radius: 50%;
+      background: var(--vhsl-navy); color: var(--white); font-size: 38px;}
+    .key-name {margin: 0; color: var(--vhsl-navy); font-size: 1.35rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 0.03em;}
+    .key-role { margin: 2px 0 8px; color: var(--vhsl-red); font-weight: 800;}
+    .key-info {margin: 3px 0;}
+    .small-button {display: inline-flex; align-items: center; justify-content: center; min-width: 110px;
+      min-height: 54px; padding: 10px 14px; border-radius: 9px; background: var(--vhsl-navy);
+      color: var(--white); text-decoration: none; font-size: 0.84rem; font-weight: 900; text-transform: uppercase;}
+    .small-button:hover, .small-button:focus {background: var(--vhsl-red); color: var(--white);}
+
+    /* =========================================================
+       COMMISSIONER DIRECTORY
+       ========================================================= */
+
+    .commissioner-section {padding: 0 0 34px;}
+    .commissioner-callout {margin: 8px auto 24px; color: var(--vhsl-navy); font-size: clamp(1.35rem, 3.1vw, 2rem);
+      font-weight: 900; line-height: 1.05; text-align: center; text-transform: uppercase; letter-spacing: 0.03em;}
+    .commissioner-callout span {color: var(--vhsl-red);}
+    .commissioner-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;}
+    .commissioner-card {position: relative; display: grid; grid-template-columns: 66px 1fr; gap: 16px; 
+	  align-items: center; background: var(--white); border: 1px solid #dce3ed; border-radius: var(--radius-md);
+      box-shadow: var(--soft-shadow); padding: 18px; overflow: hidden;}
+    .region-badge {display: grid; place-items: center; width: 70px; height: 70px; border-radius: 50%; }
+    .region-badge.navy {background: var(--vhsl-navy); }
+    .region-badge.red {background: var(--vhsl-red); }
+    .region-badge.gold {background: var(--vhsl-gold); }
+    .region-name {margin: 0 0 3px; color: var(--vhsl-navy); font-size: 1rem; font-weight: 900;
+      line-height: 1.05; text-transform: uppercase;}
+    .commissioner-name {margin: 0 0 5px; font-size: 0.96rem; color: var(--text);}
+    .commissioner-email {margin: 0 0 10px; font-size: 0.8rem; overflow-wrap: anywhere; }
+    .email-pill {display: inline-flex; align-items: center; justify-content: center;  min-width: 116px;
+      padding: 8px 14px; border-radius: 7px; background: var(--vhsl-navy); color: var(--white);
+      text-decoration: none; font-size: 0.82rem; font-weight: 900; text-transform: uppercase;    }
+    .email-pill:hover, .email-pill:focus {background: var(--vhsl-red); color: var(--white); }
+
+    /* =========================================================
+       FOOTNOTE + FOOTER
+       ========================================================= */
+
+    .info-note {display: grid; grid-template-columns: 58px 1fr; gap: 18px;  align-items: center;
+      margin: 8px 0 24px; padding: 18px 22px; border: 1px solid #ccd5e3; border-radius: var(--radius-md);
+      background: #f6f8fb; color: var(--text); font-size: 1rem;}
+    .info-icon {display: grid; place-items: center; width: 50px; height: 50px; border-radius: 50%;
+      background: var(--vhsl-navy); color: var(--white); font-size: 1.75rem; font-weight: 900;}
+    .footer {position: relative; padding: 34px 24px 38px; overflow: hidden; background: linear-gradient(135deg, var(--vhsl-navy-dark), var(--vhsl-navy));
+      color: var(--white); text-align: center; }
+    .footer::before {content: ""; position: absolute; right: -80px; top: -54px;  width: 260px; height: 150px;
+      border-bottom: 18px solid var(--vhsl-red); border-radius: 50%; transform: rotate(-13deg); }
+    .footer-title {margin: 0; font-size: 1.25rem; font-weight: 900; letter-spacing: 0.18em;
+      text-transform: uppercase;}
+    .footer-subtitle {margin: 8px 0 0; color: var(--vhsl-gold); font-weight: 900; letter-spacing: 0.14em;
+      text-transform: uppercase;}
+
+    /* =========================================================
+       RESPONSIVE BEHAVIOR
+       ========================================================= */
+
+    @media (max-width: 900px) {.process-ribbon {grid-template-columns: 1fr 1fr;}
+      .process-label {grid-column: 1 / -1; clip-path: none; min-height: 78px;}
+      .process-step:nth-child(odd)::after, .process-step:nth-child(even)::after {display: none;}
+      .action-card, .key-contact-grid, .commissioner-grid {grid-template-columns: 1fr;}
+      .action-contacts {padding-left: 0; border-left: 0; border-top: 2px solid rgba(255,255,255,0.65);
+        padding-top: 22px;}
+    }
+
+    @media (max-width: 620px) {.hero {min-height: 500px;}
+      .hero-inner {padding: 32px 20px 108px;}
+	  .hero-content {padding: 10px 18px 28px;}
+      .hero-title {font-size: 2rem; letter-spacing: 0.04em;}
+      .content-wrap {width: 90%;}
+      .process-ribbon {grid-template-columns: 1fr;}
+      .process-step {border-left: 0; border-top: 1px dashed #c9d2e0;}
+      .action-card {padding: 24px;}
+      .action-left {grid-template-columns: 1fr; text-align: center;}
+      .mail-badge {margin: 0 auto;}
+      .button {width: 100%;}
+      .key-card {grid-template-columns: 1fr; text-align: center; }
+      .avatar {margin: 0 auto;}
+      .small-button {width: 100%;}
+      .commissioner-card {grid-template-columns: 1fr; text-align: center;}
+      .region-badge {margin: 0 auto;}
+      .email-pill {width: 100%;}
+      .section-title-row::before, .section-title-row::after {display: none;}
+      .section-title-row {justify-content: center;}
+      .info-note {grid-template-columns: 1fr; text-align: center;}
+      .info-icon {margin: 0 auto;}
+    }
+
+    /* =========================================================
+       PRINT / PDF OPTIMIZATION
+       ========================================================= */
+
+    @media print {body {background: var(--white);}
+      .flyer {width: 100%; box-shadow: none;}
+      .button, .small-button, .email-pill {box-shadow: none;}
+      a {color: inherit;}
+    }
+	
+	
+  </style>
+</head>
+
+
+<!---------------------------------------------BEGIN HTML CODE--------------------------------------------->
+<body>
+  <main class="flyer">
+
+    <!-- =======================================================
+         HEADER / HERO
+         ======================================================= -->
+<header class="hero-banner">
+
+    <img
+      src="vhsl header.png"
+      alt="VHSL Banner"
+      class="hero-banner-image">
+
+</header>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      VHSL CHEER<br>
+      CONTACT INFO
+    </h1>
+
+    <div class="gold-line"></div>
+
+  </div>
+
+
+    <!-- =======================================================
+         PRIMARY ACTION CARD
+         ======================================================= -->
+    <section class="action-section" aria-labelledby="ruling-heading">
+      <div class="content-wrap">
+        <div class="action-card">
+
+            <div class="mail-badge" aria-hidden="true">✉</div>
+
+            <div>
+              <h2 id="ruling-heading" class="action-title">
+                Need a Legality Ruling?
+              </h2>
+
+              <p class="action-kicker">
+                Contact Bill Ahern
+              </p>
+			  
+			  <p class="action-detail">
+                Email your video and/or questions to obtain an official ruling.
+				<br> Please allow 7 days to receive a response.
+              </p>
+
+              <p class="action-detail">
+                <span class="label-gold">Subject Line:</span>
+                Your High School, Virginia
+              </p>
+
+              <p class="action-detail">
+                <span class="label-navy">Please CC Kelley Haney on all requests</span>
+              </p>
+            </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         KEY CONTACTS
+         ======================================================= -->
+    <section class="key-contacts-section" aria-labelledby="key-contacts-heading">
+      <div class="content-wrap">
+        <div class="section-title-row">
+          <h2 id="key-contacts-heading" class="section-title">
+            Key Contacts
+          </h2>
+        </div>
+
+        <div class="key-contact-grid">
+          <article class="key-card red-accent">
+            <div class="avatar" aria-hidden="true">📣</div>
+
+            <div>
+              <h3 class="key-name">Kelley Haney</h3>
+              <p class="key-role">Assistant Director, VHSL</p>
+              <p class="key-info">✉ <a href="mailto:khaney@vhsl.org">khaney@vhsl.org</a></p>
+              <p class="key-info">📞 434-977-8475</p>
+            </div>
+
+          </article>
+
+          <article class="key-card red-accent">
+            <div class="avatar" aria-hidden="true">📣</div>
+
+            <div>
+              <h3 class="key-name">Bill Ahern</h3>
+              <p class="key-role">VHSL Rules Interpreter</p>
+              <p class="key-info">✉ <a href="mailto:bahern@varsity.com">bahern@varsity.com</a></p>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         COMMISSIONER DIRECTORY
+         ======================================================= -->
+    <section class="commissioner-section" aria-labelledby="commissioner-heading">
+      <div class="content-wrap">
+        <p id="commissioner-heading" class="commissioner-callout">
+          All other questions should be<br />
+          routed to your <span>commissioner</span>
+        </p>
+
+        <div class="commissioner-grid">
+          <article class="commissioner-card">
+            <img class="region-badge" src="va-southwest.png" alt="Southwest Region Virginia icon" />
+            <div>
+              <h3 class="region-name">Southwest</h3>
+              <p class="commissioner-name">Joan Frost</p>
+              <p class="commissioner-email"><a href="mailto:admin@fabconva.com">admin@fabconva.com</a></p>
+              <a class="email-pill" href="mailto:admin@fabconva.com">✉ Email</a>
+            </div>
+          </article>
+
+          <article class="commissioner-card">
+            <img class="region-badge" src="va-central.png" alt="Central Region Virginia icon" />
+            <div>
+              <h3 class="region-name">Central</h3>
+              <p class="commissioner-name">Joi Delaney</p>
+              <p class="commissioner-email"><a href="mailto:joidelaney@gmail.com">joidelaney@gmail.com</a></p>
+              <a class="email-pill" href="mailto:joidelaney@gmail.com">✉ Email</a>
+            </div>
+          </article>
+
+          <article class="commissioner-card">
+            <img class="region-badge" src="va-eastern.png" alt="Eastern Region Virginia icon" />
+            <div>
+              <h3 class="region-name">Eastern</h3>
+              <p class="commissioner-name">Lanita Knight</p>
+              <p class="commissioner-email"><a href="mailto:cheer4life78@gmail.com">cheer4life78@gmail.com</a></p>
+              <a class="email-pill" href="mailto:cheer4life78@gmail.com">✉ Email</a>
+            </div>
+          </article>
+
+          <article class="commissioner-card">
+            <img class="region-badge" src="va-harrisonburg.png" alt="Harrisonburg Region Virginia icon" />
+            <div>
+              <h3 class="region-name">Harrisonburg</h3>
+              <p class="commissioner-name">Carrie Hodges</p>
+              <p class="commissioner-email"><a href="mailto:hcoacheer@gmail.com">hcoacheer@gmail.com</a></p>
+              <a class="email-pill" href="mailto:hcoacheer@gmail.com">✉ Email</a>
+            </div>
+          </article>
+
+          <article class="commissioner-card">
+            <img class="region-badge" src="va-northern.png" alt="Northern Region Virginia icon" />
+            <div>
+              <h3 class="region-name">Northern</h3>
+              <p class="commissioner-name">Lesley Farquharson</p>
+              <p class="commissioner-email"><a href="mailto:thenvcoa@gmail.com">thenvcoa@gmail.com</a></p>
+              <a class="email-pill" href="mailto:thenvcoa@gmail.com">✉ Email</a>
+            </div>
+          </article>
+
+          <article class="commissioner-card">
+            <img class="region-badge" src="va-northwest.png" alt="Northwest Region Virginia icon" />
+            <div>
+              <h3 class="region-name">Northwest</h3>
+              <p class="commissioner-name">Melissa Summerscales</p>
+              <p class="commissioner-email"><a href="mailto:northwestcoa@gmail.com">northwestcoa@gmail.com</a></p>
+              <a class="email-pill" href="mailto:northwestcoa@gmail.com">✉ Email</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         FOOTER
+         ======================================================= -->
+    <footer class="footer">
+      <p class="footer-title">Virginia High School League</p>
+      <p class="footer-subtitle">Serving Youth Since 1913</p>
+    </footer>
+  </main>
+</body>
+</html>
